@@ -85,7 +85,7 @@ let geocode = {
     },
     getLocation: function() {
         function success (data) {
-          geocode.reverseGeocode(data.coords.latitude, data.coords.longitude);
+          reverseGeocode(data.coords.latitude, data.coords.longitude);
         }
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(success, console.error);
